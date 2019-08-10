@@ -16,10 +16,14 @@
 DECL_CONSTANT("ADC_MAX", 4095);
 
 static const uint8_t adc_pins[] = {
-    GPIO('A', 0), GPIO('A', 1), GPIO('A', 2), GPIO('A', 3),
-    GPIO('A', 4), GPIO('A', 5), GPIO('A', 6), GPIO('A', 7),
-    GPIO('B', 0), GPIO('B', 1), GPIO('C', 0), GPIO('C', 1),
-    GPIO('C', 2), GPIO('C', 3), GPIO('C', 4), GPIO('C', 5)
+        GPIO('A', 0), GPIO('A', 1), GPIO('A', 2), GPIO('A', 3),
+        GPIO('A', 4), GPIO('A', 5), GPIO('A', 6), GPIO('A', 7),
+        GPIO('B', 0), GPIO('B', 1), GPIO('C', 0), GPIO('C', 1),
+        GPIO('C', 2), GPIO('C', 3), GPIO('C', 4), GPIO('C', 5),
+#if CONFIG_MACH_STM32F407
+        GPIO('F', 3), GPIO('F', 4), GPIO('F', 5), GPIO('F', 6),
+        GPIO('F', 7), GPIO('F', 8), GPIO('F', 9), GPIO('F', 10)
+#endif
 };
 
 #if CONFIG_MACH_STM32F1
